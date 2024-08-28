@@ -1,169 +1,177 @@
-/*Estilos Globales*/
+
+/*Estilos Generales*/
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #e2f2f7;
+    background-color: #e3f8fe;
     padding-top: 60px;
-    margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
     overflow-x: hidden;
 }
 
 header {
     display: flex;
     justify-content: center;
+    left: 0;
+    top: 0;
+    margin: auto;
+    z-index: 2000;
     background-color: transparent;
-    z-index: 10;
 }
 
-.header-content {
+.header-assets {
     display: flex;
     align-items: flex-start;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Limita el ancho máximo del contenido del header */
+    margin: 0 auto; /* Centra el contenido dentro del header */
     flex-direction: column;
 }
 
-.Logo {
-    padding-bottom: 20px;
+.LogoAlura {
+    padding: 0 0 20px 0;
 }
 
 h1 {
     margin: 0;
-    color: #004C4F;
-    font-size: 48px;
+    color: #003C43;
+    font-size: 50px; /* Ajusta el tamaño del título según necesites */
 }
 
 .footer {
-    padding: 20px;
+    padding: 24px;
     text-align: center;
     font-size: 1.5rem;
-    background-color: #004C4F;
+    background-color: #003C43;
+    
 }
 
-/*Estilos del Contenido*/
-.main-container {
+
+/*Estilos Contenido Principal*/
+.container {
     display: flex;
     flex-direction: row;
     gap: 20px;
     width: 90%;
     max-width: 1200px;
-    margin-top: 20px;
+    margin-top: 15px; /* Ajusta el espacio debajo del header para que no se solape */
 }
 
-.left-panel, .right-panel {
+.left-section, .right-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    border-radius: 8px;
-    width: 57%;
-    height: 700px;
+    border-radius: 10px;
+    width: 56.5%;
+    height: 697px;
+   
 }
 
-.left-panel {
-    gap: 25px;
+.left-section {
+    gap: 20px;
 }
 
-/*Estilos de Elementos*/
+/*Estilos de Objetos*/
 textarea {
     width: 100%;
     height: 100%;
     resize: none;
-    padding: 12px;
+    padding: 10px;
     font-size: 16px;
     border-radius: 5px;
-    border: 1px solid #146F74;
+    border: 1px solid #135D66;
     box-sizing: border-box;
 }
 
-.buttons-group {
+.buttons {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     justify-content: center;
 }
 
 button {
-    padding: 12px 20px;
+    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     color: #fff;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.btn-encrypt {
-    background-color: #146F74;
+.btn-Encriptar {
+    background-color: #135D66;
 }
 
-.btn-encrypt:hover {
-    background-color: #004C4F;
-    transform: scale(1.08);
+.btn-Encriptar:hover {
+    background-color: #003C43;
+    transform: scale(1.05);
 }
 
-.btn-decrypt {
-    background-color: #66A7A3;
+.btn-Desencriptar {
+    background-color: #77B0AA;
 }
 
-.btn-decrypt:hover {
-    background-color: #146F74;
-    transform: scale(1.08);
+.btn-Desencriptar:hover {
+    background-color: #135D66;
+    transform: scale(1.05);
 }
 
-.btn-clear {
-    background-color: #f9b4b4;
-    color: #004C4F;
+.btn-Limpiar {
+    background-color: #fcb4b4;
+    color: #003C43;
 }
 
-.btn-clear:hover {
-    background-color: #d86060;
+.btn-Limpiar:hover {
+    background-color: #d16060;
     color: #fff;
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
-.copy-btn {
-    margin-top: 15px;
-    padding: 12px 20px;
+.copy-button {
+    margin-top: 10px;
+    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #66A7A3;
+    background-color: #77B0AA;
     color: #fff;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.copy-btn:hover {
-    background-color: #146F74;
-    transform: scale(1.08);
+.copy-button:hover {
+    background-color: #135D66;
+    transform: scale(1.05);
 }
 
 /*Diseño Responsivo*/
 
+/* Diseño para pantallas grandes (desktop) */
 @media (max-width: 1200px) {
+
     .header {
-        padding: 8%;
+        padding: 10%;
     }
 
-    .Logo {
+    .LogoAlura {
         justify-content: flex-start;
     }
 
-    .main-container {
+    .container {
         flex-direction: column;
         padding: 5%;
      }
 
-     .left-panel,
-     .right-panel {
-        width: 100%;
+     .left-section,
+     .right-section {
+        width: auto;
         height: auto;
      }
 }
